@@ -1,0 +1,204 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="DonemSonu.Layout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Anasayfa</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color: #CCCCCC">
+    <style>
+        /* row style */
+        .col-1 {width: 8.33%}
+        .col-2 {width: 16.66%}
+        .col-3 {width: 12%
+        }
+        .col-4 {width: 33.33%}
+        .col-5 {width: 41.66%}
+        .col-6 {width: 50%}
+        .col-7 {width: 58.33%}
+        .col-8 {width: 66.66%}
+        .col-9 {width: 75%}
+        .col-10 {width: 83.33%}
+        .col-11 {width: 91.66%}
+        .col-12 {width: 100%}
+
+        /* display */
+        .d-flex {display: flex}
+        .d-grid {display: grid}
+
+        /* 
+           * margin style
+           * @params <top-bottom> <left-right>
+        */
+        .m-0 {margin: 0}          
+        .m-1 {margin: 5px}
+        .m-2 {margin: 10px}
+        .mx-1 {margin: 5px 0}
+        .mx-2 {margin: 10px 0}
+        .my-1 {margin: 0 5px}
+        .my-2 {margin: 0 10px}
+        .mt-0 {margin-top: 0}
+        .mt-1 {margin-top: 5px}
+        .mt-2 {margin-top: 10px}
+        .mb-0 {margin-bottom: 0}
+        .mb-1 {margin-bottom: 5px}
+        .mb-2 {margin-bottom: 10px}
+        .ms-0 {margin-left: 0}
+        .ms-1 {margin-left: 5px}
+        .ms-2 {margin-left: 10px}
+        .me-0 {margin-right: 0}
+        .me-1 {margin-right: 5px}
+        .me-2 {margin-right: 10px}
+
+        /* 
+            * padding style
+            * @params <top-bottom> <left-right>
+        */
+        .p-0 {padding: 0}
+        .p-1 {padding: 5px}
+        .p-2 {padding: 10px}
+        .px-1 {padding: 5px 0}
+        .px-2 {padding: 10px 0}
+        .py-1 {padding: 0 5px}
+        .py-2 {padding: 0 10px}
+        .pt-0 {padding-top: 0}
+        .pt-1 {padding-top: 5px}
+        .pt-2 {padding-top: 10px}
+        .pb-0 {padding-bottom: 0}
+        .pb-1 {padding-bottom: 5px}
+        .pb-2 {padding-bottom: 10px}
+        .ps-0 {padding-left: 0}
+        .ps-1 {padding-left: 5px}
+        .ps-2 {padding-left: 10px}
+        .pe-0 {padding-right: 0}
+        .pe-1 {padding-right: 5px}
+        .pe-2 {padding-right: 10px}
+
+        /*
+            * color style
+        */
+        .text-danger {color: rgb(255,51,0)}
+        .text-warning {color: rgb(224, 123, 52)}
+        .text-success {color: rgb(28 170 46)}
+        .text-info {color: rgb(37, 188, 209)}
+        .text-primary {color: rgb(32, 85, 195)}
+        .text-dark {color: rgb(34 34 34)}
+        .text-light {color: rgb(226, 226, 226)}
+        .bg-dark {background-color: rgb(34 34 34)}
+        .bg-light {background-color: rgb(226, 226, 226)}
+        .bg-primary {background-color: rgb(32, 85, 195)}
+        .bg-info {background-color: rgb(37, 188, 209) }
+        .bg-success {background-color: rgb(28 170 46)}
+        .bg-warning {background-color: rgb(224, 123, 52)}
+        .bg-danger {background-color: rgb(255,51,0)}
+
+        /*
+            * with style
+        */
+        .w-100 {width: 100%}
+        .w-75 {width: 75%}
+        .w-50 {width: 50%}
+        .w-25 {width: 25%}
+
+        /* list style */
+        .list-none {list-style: none}
+
+        /* text */
+        .decoration-none { text-decoration: none}
+
+        /* border */
+        .border {border: 1px solid  rgb(207, 207, 207)}
+        .border-bottom {border-bottom: 1px solid  rgb(207, 207, 207)}
+        .border-right {border-right: 1px solid  rgb(207, 207, 207)}
+        .border-left {border-left: 1px solid rgb(207, 207, 207)}
+        .b-radius-1 {border-radius: 3px}
+        .b-radius-2 {border-radius: 5px}
+        .b-circle {border-radius: 100%}
+
+        /* justify-content */
+        .jc-center {justify-content: center}
+        .jc-end {justify-content: flex-end}
+        .jc-start {justify-content: flex-start}
+        .jc-between {justify-content: space-between}
+        .jc-around {justify-content: space-around}
+        
+
+
+        .auto-style1 {
+            width: 898px;
+            height: 53px;
+        }
+        
+
+
+        .auto-style2 {
+            width: 756px;
+            height: 415px;
+        }
+
+        li a{
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+
+
+        .auto-style3 {
+            height: 415px;
+            width: 220px;
+        }
+        
+
+
+        .auto-style4 {
+            height: 400px;
+            width: 900px;
+        }
+        
+
+
+    </style>
+
+    <form id="form1" runat="server">
+        <header class="d-flex border col-12" style="background-color: #333333; color: #CCCCCC;">
+            <table class="col-12">
+                <tr>
+                    <td  align="left" class="auto-style1">
+                        <asp:Button ID="Button1" runat="server" 
+                                    Text="" class="p-1 me-2 ms-2" BackColor="#336699" BorderStyle="None" ForeColor="White" Enabled="False"/>
+                        <asp:Button ID="logout" runat="server" Text="Çıkış Yap" class="p-1 me-2" BackColor="#FFCC66" BorderColor="#996600" BorderStyle="Solid" OnClick="logout_Click"/>
+                    </td>
+                </tr>
+            </table>
+        </header>
+        <table class="col-12" style="background-color: #336699; color: #CCCCCC;">
+            <tr valign="top">
+                <td class="col-4  border-right">
+                    <ul class="mt-2 list-none">
+                        <li class="p-1 mb-2">
+                            <a href="DersEkle.aspx">Ders Ekle</a>
+                        </li>
+                        <li class="p-1 mb-2">
+                            <a href="DersHarfNotu.aspx">Ders Harf Notu</a>
+                        </li>
+                        <li class="p-1  mb-2">
+                            <a href="DönemSonuOrtalama.aspx">Dönem Sonu Ortalama</a>
+                        </li>
+                    </ul>
+                </td>
+                <td rowspan="2" colspan="1" class="col-8">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+        
+      
+    </form>
+    
+</body>
+</html>
